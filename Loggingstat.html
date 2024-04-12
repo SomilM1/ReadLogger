@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Loggingstats.css" rel="stylesheet">
+</head>
+<style>
+    .container
+    {
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Add an Log for a book</h1>
+        <script>
+            function displayMessage() {
+    // Get stored books from localStorage
+    var storedBooks = localStorage.getItem("userBooks");
+
+    if (storedBooks) {
+        // Parse the stored books from JSON
+        var books = JSON.parse(storedBooks);
+
+        // Display each book
+        books.forEach(function(book) {
+            var bookParagraph = document.createElement("p");
+            bookParagraph.textContent = "Book: " + book;
+            document.body.appendChild(bookParagraph);
+        });
+    }
+
+    var container = document.createElement("div");
+    container.classList.add("container");
+
+    var addButton = document.createElement("button");
+    addButton.textContent = "Add Another Book";
+    addButton.onclick = function() {
+        var newBook = prompt("Type your new book here:");
+        if (newBook !== null) {
+            // If there are no stored books, initialize an empty array
+            var books = JSON.parse(localStorage.getItem("userBooks")) || [];
+
+            // Add the new book to the array
+            books.push(newBook);
+
+            // Store the updated array back to localStorage
+            localStorage.setItem("userBooks", JSON.stringify(books));
+
+            // Display the new book
+            var newBookParagraph = document.createElement("p");
+            newBookParagraph.textContent = "Book: " + newBook;
+            document.body.appendChild(newBookParagraph);
+        }
+    };
+    container.appendChild(addButton);
+    document.body.appendChild(container);
+}
+
+displayMessage();
+            // This function checks if there is a stored message in the browser's local storage under the key "userMessage."
+        </script>
+    </div>
+</body>
+</html>

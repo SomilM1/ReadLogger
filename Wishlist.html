@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlistitle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Add a book to Wishlist</h1>
+    <p>Ex. Dog man</p>
+
+    <script>
+        function displayMessage() {
+            var storedMessage = localStorage.getItem("userMessage");
+            if (storedMessage) {
+                var messageParagraph = document.createElement("p");
+                messageParagraph.textContent = "Book: " + storedMessage;
+                document.body.appendChild(messageParagraph);
+                
+                var editButton = document.createElement("button");
+                editButton.textContent = "Edit book";
+                editButton.onclick = function() {
+                    var newMessage = prompt("Type your new book:", storedMessage);
+                    if (newMessage !== null) {
+                        localStorage.setItem("userMessage", newMessage);
+                        messageParagraph.textContent = "Book: " + newMessage;
+                    }
+                };
+                document.body.appendChild(editButton);
+
+                var addButton = document.createElement("button");
+                addButton.textContent = "Add Another book";
+                addButton.onclick = function() {
+                    var additionalMessage = prompt("Type your new book here:");
+                    if (additionalMessage !== null) {
+                        var additionalMessageParagraph = document.createElement("p");
+                        additionalMessageParagraph.textContent = "your book: " + additionalMessage;
+                        document.body.appendChild(additionalMessageParagraph);
+                    }
+                };
+                document.body.appendChild(addButton);
+            } else {
+                var message = prompt("Type your book here:");
+                if (message !== null) {
+                    localStorage.setItem("userMessage", message);
+                    var messageParagraph = document.createElement("p");
+                    messageParagraph.textContent = "Book: " + message;
+                    document.body.appendChild(messageParagraph);
+                }
+            }
+        }
+        displayMessage();
+        // This function checks if there is a stored message in the browser's local storage under the key "userMessage."
+    </script>
+</body>
+</html>

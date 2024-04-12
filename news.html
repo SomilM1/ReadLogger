@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 1650px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+body {
+  background-color: #e5e5e5ff;
+  color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fca311ff;
+}
+
+li {
+  text-align: center; /* Center the text horizontally */
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: black;
+}
+
+.active {
+  background-color: #14213dff;
+}
+
+.navbar {
+  width: 200px; /*width of the navbar */
+  background-color: #fca311ff; /*desired background color */
+  position: fixed; /* Fix the navbar position */
+  left: 0; /* Align to the left */
+  top: 0; /* Align to the top */
+  height: 100%; /* Occupy full height of the viewport */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: flex-start; /* Align items to the top of the container */
+  padding-top: 20px; 
+  overflow: scroll; /* Enable scrolling */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  padding: 10px;
+  text-align: center; /* Center the text horizontally */
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li:hover {
+  background-color: #fca311ff; /* Change background color on hover */
+}
+
+ button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  opacity: 0.9;
+  }
+
+  button:hover {
+    background-color: #e5e5e5ff;
+    opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="Outer-div">
+      <div class="navbar">
+       
+        <br>
+        <br>
+        <center>
+      <img class="Img" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png" height="50px" width="50px"> 
+      <p>Sam
+          <br>
+          Readcoins <br>2000📖 <em><b><br>Owner bonus</b></em>
+      </p>
+  <h1>
+      <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a class="active" href="news.html">News<br>Letter</a></li>
+          <li><a href="AI.html">Read<br>Logger <br>AI </a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h2>ReadLogger's Tools</h2>
+        <a href="Loggingstat.html"><button class="button">Log Stats</button></a>
+        <a href="Wishlist.html"><button>WishList a book BETA</button></a>
+        <a href="Search.html"><button>Search a book DEMO</button></a>
+      </center>
+  </h1>
+  </div>
+        <div class="title">
+            <center>
+                <h1>Newsletter</h1>
+            </center>
+        </div>
+        <div class="info">
+            <center><p>Get our News letters by pressing subscribe <br> P.S this does not acutally work may change this later to work. </p></center>
+        </div>
+        <div class="form">
+            <form netlify>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="6" cols="50" required></textarea><br><br>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
