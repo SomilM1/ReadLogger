@@ -7,3 +7,9 @@ Thank you for choosing us to accompany you on your literary odyssey.
 
 ![ReadLogger showcase SMALLER (1)](https://github.com/SomilM1/ReadLogger/assets/159674757/e7da1d7d-0cad-46a8-a2b6-4ab0af18bdac)
 ![Github image](https://github.com/SomilM1/ReadLogger/assets/159674757/263b4bec-0777-4a96-8eb9-e273e554e5c3)
+
+#UPDATE
+
+We have Won first place prize in coding using this site
+2023 Bit By Bit champions
+https://bitbybittechnology.github.io/meetTheTeam.html
