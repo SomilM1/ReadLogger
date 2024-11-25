@@ -12,4 +12,4 @@ Thank you for choosing us to accompany you on your literary odyssey.
 
 We have Won first place prize in coding using this site
 2023 Bit By Bit champions
-https://bitbybittechnology.github.io/meetTheTeam.html
+https://bitbybittechnology.github.io
